@@ -5,9 +5,10 @@ import { useNavigate } from 'react-router-dom'
 import { useContext, useEffect, useState } from 'react'
 import  { StoreContext } from '../../../../Context/StoreContext'
 // eslint-disable-next-line react/prop-types
-const Navbar = ({setadmin,setShowLogin,showLogin}) => {
+const Navbar = ({setShowLogin,showLogin}) => {
  // eslint-disable-next-line no-unused-vars
- const {token,setToken,cartItems,setCartItems}=useContext(StoreContext)
+ const {token,setToken,cartItems,setCartItems,admin,setadmin}=useContext(StoreContext)
+
 
   const logout = () => {
     localStorage.removeItem("token");

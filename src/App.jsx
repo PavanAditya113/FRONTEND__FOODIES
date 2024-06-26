@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import Home from './pages/Home/Home'
 import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
@@ -18,15 +18,17 @@ const App = () => {
  
   const [showLogin,setShowLogin] = useState(false);
   // eslint-disable-next-line no-unused-vars
-  const [admin,setadmin]=useState(false);
-
+  const {admin,setadmin}=useContext(StoreContext);
+useEffect(()=>{
+  console.log(admin)
+},[admin]);
   return (
     <>
 
     <ToastContainer/>
     
     {showLogin?<LoginPopup setShowLogin={setShowLogin} setadmin={setadmin}/>:<></>}
-    {admin?<Admin setadmin={setadmin} setShowLogin={setShowLogin} showLogin/>:
+    {admin ? <Admin  setShowLogin={setShowLogin} />:
       <div className='app'>
         <Navbar setShowLogin={setShowLogin}/>
         <Routes>

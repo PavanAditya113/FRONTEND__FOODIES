@@ -8,12 +8,12 @@ import Orders from './pages/Orders/Orders'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Admin = ({setadmin,setshowlogin}) => {
+const Admin = ({setshowlogin}) => {
   
   return (
-    <div className='app'>
+    <div className='app1'>
       <ToastContainer />
-      <Navbar setadmin={setadmin}setshowlogin={setshowlogin} />
+      <Navbar setshowlogin={setshowlogin} />
       <hr />
       <div className="app-content">
         <Sidebar />
