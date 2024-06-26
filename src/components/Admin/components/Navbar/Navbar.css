@@ -1,0 +1,42 @@
+.navbar{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 4%;
+}
+.navbar .logo{
+    width: max(10%,80px);
+    height: 45px;
+    
+}
+.navbar .profile{
+    width: 40px;
+}
+
+.dropdown {
+    display: none; /* Hide the dropdown by default */
+    position: absolute; /* Position it relative to the .c2 div */
+    top: 80%; /* Position it below the profile image */
+    right: 50px; /* Align it to the right */
+    background-color: lightgrey;
+    list-style: none; /* Remove default list styling */
+    
+    margin: 0;
+    border: 1px solid #ccc; /* Optional border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    cursor: pointer;
+  }
+.dropdown img{
+    width: 20px;
+}
+.c2:hover .dropdown{
+
+    display: flex;
+   
+  }
+  .c2:hover img{
+ display: inline;
+  }
+
+  
